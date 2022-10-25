@@ -1,0 +1,19 @@
+@import './scss/index.scss';
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .label {
+    font-family: $font;
+    font-size: 1.2rem;
+    color: $gray;
+  }
+
+  .input {
+    font-size: 1.2rem;
+    font-family: $font;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import './scss/index.scss';
+
+.accordionGrid {
+  display: grid;
+  margin-block: 3rem;
+
+  .bottomBorder {
+    background-color: $primary-color;
+    height: 1px;
+    width: 100%;
+  }
+}

@@ -8,10 +8,11 @@ const ReviewCard = ({ review }) => {
         <Image src={review.image} alt={review.name} layout='fill' objectFit='cover' />
       </div>
       <p>{review.description}</p>
-      <p>
+      <p className={styled.reviewName}>
         <span>{review.name}</span>
+        <br />
+        {review.byline}
       </p>
-      <p>{review.byline}</p>
     </div>
   );
 };

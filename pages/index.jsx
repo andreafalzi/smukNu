@@ -20,7 +20,7 @@ export default function Home({ products, reviews }) {
           <h1 className={styled.title}>
             Udvalgt <span>Skønhed</span>
           </h1>
-          <ProductsList products={products} />
+          <ProductsList products={products.filter((product) => product.recommended === true)} />
         </div>
       </section>
       <section className={styled.section}>

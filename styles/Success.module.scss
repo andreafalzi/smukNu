@@ -1,0 +1,63 @@
+@import './scss/index.scss';
+
+.success {
+  background-color: $secondary-color;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+
+  .successFlex {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    text-align: center;
+    font-family: $font;
+
+    @media screen and (min-width: 728px) {
+      padding-inline: 8rem;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: 4rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 5rem;
+      }
+    }
+
+    .span {
+      color: $primary-color;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-block: 1rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 3rem;
+      }
+    }
+
+    .imageCircle {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+      border: 8px solid $primary-color;
+      margin-block: 3rem;
+      margin-inline: auto;
+    }
+
+    p {
+      font-size: 1.2rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 1.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

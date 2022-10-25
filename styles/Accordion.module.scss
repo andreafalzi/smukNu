@@ -1,0 +1,51 @@
+@import './scss/index.scss';
+
+.accordion {
+  overflow: hidden;
+}
+
+.accordionRow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-block: 1rem;
+  border-top: 1px solid $primary-color;
+  font-family: $font;
+  gap: 10px;
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    &.bold {
+      font-weight: 700;
+    }
+  }
+
+  .icon {
+    font-size: 3rem;
+    transition: all 100ms ease-in;
+    color: $footer;
+  }
+
+  .icon.fill {
+    color: $primary-color;
+  }
+}
+
+.accordionBox {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 300ms linear;
+  font-family: $font;
+
+  p {
+    margin-bottom: 1rem;
+    padding-left: 60px;
+  }
+}
+
+.accordionBox.show {
+  max-height: 100vh;
+  transition: all 300ms linear;
+}

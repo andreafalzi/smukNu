@@ -10,9 +10,10 @@ const HomeHeader = ({ style }) => {
         <p>
           Alt hvad du behøver... <br /> <span>Smuk nu</span>
         </p>
-        <Button>
-          <Link href='/produkter'>Se udvalgte produkter</Link>
-        </Button>
+
+        <Link href='/produkter' passHref>
+          <Button>Se udvalgte produkter</Button>
+        </Link>
       </div>
     </header>
   );

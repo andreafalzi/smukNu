@@ -1,0 +1,21 @@
+@import './scss/index.scss';
+
+.textareaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .label {
+    font-family: $font;
+    font-size: 1.2rem;
+    color: $gray;
+  }
+
+  .textarea {
+    font-size: 1.2rem;
+    font-family: $font;
+    padding: 0.5rem;
+    resize: vertical;
+    min-height: 200px;
+  }
+}

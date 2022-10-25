@@ -7,18 +7,45 @@
   font-family: $font;
   text-align: center;
 
-  h1 {
-    text-transform: uppercase;
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  @media screen and (min-width: 728px) {
+    display: flex;
+    gap: 2rem;
   }
 
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-
-    span {
+  .boxText {
+    h1 {
       text-transform: uppercase;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+    @media screen and (min-width: 728px) {
+      width: 50%;
+    }
+  }
+
+  .boxImages {
+    display: none;
+
+    .boxImage {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 728px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 50%;
     }
   }
 }

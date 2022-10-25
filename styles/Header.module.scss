@@ -11,10 +11,51 @@
     font-family: $font;
     text-align: center;
 
+    @media screen and (min-width: 728px) {
+      width: 80%;
+      padding-inline: 4rem;
+    }
+
     h1 {
       text-transform: uppercase;
       font-size: 3rem;
       margin-bottom: 1rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .primaryBox {
+    background-color: $primary-color;
+    color: $white;
+    width: 100%;
+    padding-block: 3rem;
+    font-family: $font;
+    text-align: center;
+
+    @media screen and (min-width: 728px) {
+      width: 80%;
+      padding-inline: 4rem;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 4rem;
+      }
     }
 
     p {
@@ -27,17 +68,59 @@
     }
   }
   .invertedBox {
-    background-color: $primary-color;
+    background-color: $white;
+    color: $black;
+    width: 100%;
+    padding-block: 3rem;
+    font-family: $font;
+    text-align: center;
+
+    @media screen and (min-width: 728px) {
+      width: 80%;
+      padding-inline: 4rem;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+
+      @media screen and (min-width: 728px) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .transparentBox {
+    background-color: rgba($black, 0.7);
     color: $white;
     width: 100%;
     padding-block: 3rem;
     font-family: $font;
     text-align: center;
 
+    @media screen and (min-width: 728px) {
+      width: 80%;
+      padding-inline: 4rem;
+    }
+
     h1 {
       text-transform: uppercase;
       font-size: 3rem;
       margin-bottom: 1rem;
+
+      @media screen and (min-width: 728px) {
+        font-size: 4rem;
+      }
     }
 
     p {
