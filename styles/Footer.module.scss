@@ -1,0 +1,30 @@
+@import './scss/index.scss';
+
+.footer {
+  background-color: $footer;
+  padding-block: 2rem;
+
+  .footerIcons {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+    a {
+      cursor: pointer;
+      transition: all 300ms ease-in;
+
+      &:hover {
+        scale: 1.1;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footerInfos {
+    font-family: $font;
+    text-align: center;
+  }
+}

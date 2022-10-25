@@ -1,0 +1,8 @@
+@import './scss/index.scss';
+
+.reviewsGrid {
+  display: grid;
+  justify-content: center;
+  gap: 4rem;
+  grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+}

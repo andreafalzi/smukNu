@@ -1,0 +1,17 @@
+@import './scss/index.scss';
+
+.section {
+  padding-block: 3rem;
+
+  .title {
+    font-family: $font;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+    span {
+      color: $primary-color;
+    }
+  }
+}
