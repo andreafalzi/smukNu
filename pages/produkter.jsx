@@ -3,6 +3,7 @@ import GenericHeader from '../components/GenericHeader';
 import ProductsList from '../components/ProductsList';
 import TeaserBox from '../components/TeaserBox';
 import produkterHeader from '../public/assets/headers/products.jpg';
+import { produkterHeaderText } from '../constants/index';
 import styled from '../styles/Home.module.scss';
 
 const Produkter = ({ products }) => {
@@ -13,7 +14,7 @@ const Produkter = ({ products }) => {
         <meta name='description' content='Din sted to beauty' />
         <link rel='icon' href='/smuknu_logo.png' />
       </Head>
-      <GenericHeader style={{ backgroundImage: `url(${produkterHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title='SKØNNE PRODUKTER' text='Herunder finder du alle vores produkter' boxStyle='transparentBox' />
+      <GenericHeader style={{ backgroundImage: `url(${produkterHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={produkterHeaderText.title} text={produkterHeaderText.text} boxStyle='transparentBox' />
       <section className={styled.section}>
         <div className={styled.container}>
           <h1 className={styled.title}>

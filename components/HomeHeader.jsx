@@ -1,18 +1,19 @@
 import Link from 'next/link';
-import styled from '../styles/Header.module.scss';
 import Button from './Button';
+import { homeHeaderText } from '../constants/index';
+import styled from '../styles/Header.module.scss';
 
 const HomeHeader = ({ style }) => {
   return (
     <header className={styled.header} style={style}>
       <div className={`${styled.container} ${styled.box}`}>
-        <h1>Skønhed for alle</h1>
+        <h1>{homeHeaderText.title}</h1>
         <p>
-          Alt hvad du behøver... <br /> <span>Smuk nu</span>
+          {homeHeaderText.text} <br /> <span>{homeHeaderText.span}</span>
         </p>
 
         <Link href='/produkter' passHref>
-          <Button>Se udvalgte produkter</Button>
+          <Button>{homeHeaderText.button}</Button>
         </Link>
       </div>
     </header>

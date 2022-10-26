@@ -6,9 +6,12 @@ import GenericHeader from '../components/GenericHeader';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import medlemHeader from '../public/assets/headers/subscribers.jpg';
+import { medlemHeaderText } from '../constants/index';
+import { useAppContext } from '../context/state';
 import styled from '../styles/Medlem.module.scss';
 
 const Medlem = () => {
+  const { setMedlemName } = useAppContext();
   const router = useRouter();
   const defaultformFields = {
     name: '',
@@ -40,6 +43,7 @@ const Medlem = () => {
     });
 
     resetFormFields();
+    setMedlemName(name);
     router.push('/success');
   };
 
@@ -56,7 +60,7 @@ const Medlem = () => {
         <meta name='description' content='Din sted to beauty' />
         <link rel='icon' href='/smuknu_logo.png' />
       </Head>
-      <GenericHeader style={{ backgroundImage: `url(${medlemHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title='Bliv Medlem' text='Opret dig som medlem og få flere fordele og nyheder I det øjeblik vi har dem.' text2='Send gerne ris eller ros med når du melder dig ind, vi er altid parate til dialog.' boxStyle='invertedBox' />
+      <GenericHeader style={{ backgroundImage: `url(${medlemHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={medlemHeaderText.title} text={medlemHeaderText.text} text2={medlemHeaderText.text2} boxStyle='invertedBox' />
       <form onSubmit={handleSubmit} className={`${styled.form} ${styled.container}`}>
         <Input labelName='Fulde navn *' type='text' required name='name' value={name} onChange={handleChange} />
         <Input labelName='E-mail *' type='email' required name='email' value={email} onChange={handleChange} pattern='\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b' title='Enter a valid email' />

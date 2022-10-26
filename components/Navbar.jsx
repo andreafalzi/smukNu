@@ -2,69 +2,81 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/smuknu_logo.png';
-import { MdMenu, MdClose } from 'react-icons/md';
+import { MdMenu, MdClose, MdShoppingBag } from 'react-icons/md';
 import styled from '../styles/Navbar.module.scss';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenCart, setIsOpenCart] = useState(false);
+
+  const cartList = [];
+  console.log(cartList.length);
+
+  const menuLinks = [
+    { title: 'Forside', href: '/' },
+    { title: 'Vores produkter', href: '/produkter' },
+    { title: 'Spørg om sundhed', href: '/sundhed' },
+    { title: 'Bliv medlem', href: '/medlem' },
+  ];
   return (
     <nav className={styled.nav}>
-      <div className={`${styled.container} ${styled.navbar}`}>
-        <Link href='/'>
-          <div className={styled.img}>
-            <Image src={logo} alt='Hjemme side logo' />
+      <div className={styled.navbar}>
+        <div className={styled.container}>
+          <div className={styled.navbarContent}>
+            <Link href='/'>
+              <div className={styled.img}>
+                <Image src={logo} alt='Hjemme side logo' />
+              </div>
+            </Link>
+            <ul className={styled.navLinks}>
+              {menuLinks.map((link, index) => (
+                <li key={index} className={styled.navLink}>
+                  <Link href={link.href}>{link.title}</Link>
+                </li>
+              ))}
+            </ul>
+            <MdShoppingBag
+              className={`${styled.iconCart} ${cartList.length > 0 ? styled.pink : ''}`}
+              onClick={() => {
+                setIsOpenCart((prev) => !prev);
+              }}
+            />
+            {!isOpenMenu ? (
+              <MdMenu
+                className={styled.iconMenu}
+                onClick={() => {
+                  setIsOpenMenu((prev) => !prev);
+                }}
+              />
+            ) : (
+              <MdClose
+                className={styled.iconMenu}
+                onClick={() => {
+                  setIsOpenMenu((prev) => !prev);
+                }}
+              />
+            )}
           </div>
-        </Link>
-        {!isOpen ? (
-          <MdMenu
-            className={styled.icon}
-            onClick={() => {
-              setIsOpen((prev) => !prev);
-            }}
-          />
-        ) : (
-          <MdClose
-            className={styled.icon}
-            onClick={() => {
-              setIsOpen((prev) => !prev);
-            }}
-          />
-        )}
+        </div>
       </div>
-      <ul className={`${styled.container} ${styled.menu} ${isOpen ? styled.open : ''}`}>
-        <li
-          className={styled.link}
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-        >
-          <Link href='/'>Forside</Link>
-        </li>
-        <li
-          className={styled.link}
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-        >
-          <Link href='/produkter'>Vores produkter</Link>
-        </li>
-        <li
-          className={styled.link}
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-        >
-          <Link href='/sundhed'>Spørg om sundhed</Link>
-        </li>
-        <li
-          className={styled.link}
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-        >
-          <Link href='/medlem'>Bliv medlem</Link>
-        </li>
+
+      {/* Dropdown menu with links */}
+      <ul className={` ${styled.menu} ${isOpenMenu ? styled.open : ''}`}>
+        {menuLinks.map((link, index) => (
+          <li
+            key={index}
+            className={styled.link}
+            onClick={() => {
+              setIsOpenMenu((prev) => !prev);
+            }}
+          >
+            <Link href={link.href}>{link.title}</Link>
+          </li>
+        ))}
       </ul>
+
+      {/* Cart Dropdown */}
+      <ul className={`${styled.cartMenu} ${isOpenCart ? styled.open : ''}`}>{cartList.length > 0 ? cartList.map((item, index) => <li key={index}>{item}</li>) : <p>Der er ingen produkter i kurven</p>}</ul>
     </nav>
   );
 };

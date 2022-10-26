@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import { AppWrapper } from '../context/state';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, ...appProps }) {
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps, ...appProps }) {
       </Layout>
     );
   };
-  return getContent();
+  return <AppWrapper>{getContent()}</AppWrapper>;
 }
 
 export default MyApp;

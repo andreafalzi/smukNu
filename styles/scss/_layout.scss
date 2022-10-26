@@ -7,4 +7,7 @@
   @media screen and (min-width: 728px) {
     padding-inline: 3rem;
   }
+  @media screen and (min-width: 1366px) {
+    padding-inline: unset;
+  }
 }

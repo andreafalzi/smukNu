@@ -6,13 +6,13 @@ const ProductCard = ({ product }) => {
     <div className={styled.productCard}>
       <div className={styled.cardImage}>
         <Image src={product.image} layout='fill' objectFit='cover' alt={product.title} />
+        {product.discountInPercent !== '' && (
+          <p className={styled.discount}>
+            Spar <span>{product.discountInPercent}%</span>
+          </p>
+        )}
       </div>
-      {product.discountInPercent !== '' && (
-        <p className={styled.discount}>
-          Spar <span>{product.discountInPercent}%</span>
-        </p>
-      )}
-      <div className={styled.cardText}>
+      <div className={styled.innerText}>
         <p>{product.title}</p>
         <h3>{product.price},00 kr.</h3>
       </div>
