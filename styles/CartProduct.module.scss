@@ -1,0 +1,31 @@
+@import './scss/index.scss';
+
+.cartProduct {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 1rem;
+
+  .cartProductImage {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .cartProductText {
+    width: 100%;
+
+    .cartProductTitle {
+      font-size: 1.2rem;
+    }
+
+    .cartProductPrice {
+      margin-top: 2rem;
+      font-weight: 700;
+      white-space: nowrap;
+      float: right;
+    }
+  }
+}

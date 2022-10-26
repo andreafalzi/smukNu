@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/smuknu_logo.png';
 import { MdMenu, MdClose, MdShoppingBag } from 'react-icons/md';
+import { useAppContext } from '../context/state';
+import CartDropdown from './CartDropdown';
 import styled from '../styles/Navbar.module.scss';
 
 const Navbar = () => {
+  const { cartItems, cartTotal } = useAppContext();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpenCart, setIsOpenCart] = useState(false);
-
-  const cartList = [];
-  console.log(cartList.length);
 
   const menuLinks = [
     { title: 'Forside', href: '/' },
@@ -36,7 +36,7 @@ const Navbar = () => {
               ))}
             </ul>
             <MdShoppingBag
-              className={`${styled.iconCart} ${cartList.length > 0 ? styled.pink : ''}`}
+              className={`${styled.iconCart} ${cartItems.length > 0 ? styled.pink : ''}`}
               onClick={() => {
                 setIsOpenCart((prev) => !prev);
               }}
@@ -76,7 +76,7 @@ const Navbar = () => {
       </ul>
 
       {/* Cart Dropdown */}
-      <ul className={`${styled.cartMenu} ${isOpenCart ? styled.open : ''}`}>{cartList.length > 0 ? cartList.map((item, index) => <li key={index}>{item}</li>) : <p>Der er ingen produkter i kurven</p>}</ul>
+      <CartDropdown props={{ isOpenCart, cartItems, cartTotal }} />
     </nav>
   );
 };
