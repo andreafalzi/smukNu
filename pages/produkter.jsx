@@ -30,8 +30,8 @@ const Produkter = ({ products }) => {
 
 export default Produkter;
 
-//fetch on build time
-export const getStaticProps = async () => {
+//fetching
+export const getServerSideProps = async () => {
   const resProducts = await fetch('https://smuknu.webmcdm.dk/products');
   const products = await resProducts.json();
 

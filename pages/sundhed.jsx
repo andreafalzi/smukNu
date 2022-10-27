@@ -34,8 +34,8 @@ const Sundhed = ({ questions }) => {
 
 export default Sundhed;
 
-//fetch on build time
-export const getStaticProps = async () => {
+//fetching
+export const getServerSideProps = async () => {
   const resQuestions = await fetch('https://smuknu.webmcdm.dk/questions');
   const questions = await resQuestions.json();
 
