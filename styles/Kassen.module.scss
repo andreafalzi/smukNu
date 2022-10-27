@@ -1,0 +1,17 @@
+@import './scss/index.scss';
+
+.kassenItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: $font;
+
+  p {
+    font-size: 1.2rem;
+
+    span {
+      float: right;
+      font-weight: 700;
+    }
+  }
+}

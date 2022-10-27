@@ -5,6 +5,7 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps, ...appProps }) {
   const getContent = () => {
     if (['/success'].includes(appProps.router.pathname)) return <Component {...pageProps} />;
+    if (['/kvittering'].includes(appProps.router.pathname)) return <Component {...pageProps} />;
 
     return (
       <Layout>

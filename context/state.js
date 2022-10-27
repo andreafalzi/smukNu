@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
 
 const AppContext = createContext();
 
@@ -55,6 +55,32 @@ export function AppWrapper({ children }) {
     setCartItems(clearCartItem(cartItems, cartItemToClear));
   };
 
+  const clearAll = () => {
+    setCartItems([]);
+    window.localStorage.clear();
+  };
+
+  //** Using localstorage to save the current item basket **//
+  // useRef is needed because it doesn't change until the actual ref gets changed by an event
+  const initialRender = useRef(true);
+
+  // Set the cartItem in the local storage
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false;
+      return;
+    }
+    window.localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  // Get the cartItems in the local storage
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('cartItems'))) {
+      const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+      setCartItems([...storedCartItems]);
+    }
+  }, []);
+
   const sharedState = {
     medlemName,
     setMedlemName,
@@ -64,6 +90,7 @@ export function AppWrapper({ children }) {
     addItemToCart,
     removeItemToCart,
     clearItemFromCart,
+    clearAll,
   };
 
   return <AppContext.Provider value={sharedState}>{children}</AppContext.Provider>;

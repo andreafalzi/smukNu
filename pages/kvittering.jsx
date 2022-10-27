@@ -1,13 +1,18 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import Button from '../components/Button';
-import productImage from '../public/assets/products/product_1213213211.jpg';
-import Head from 'next/head';
-import { useAppContext } from '../context/state';
+import productImage from '../public/assets/products/product_2332233444.jpg';
 import styled from '../styles/Success.module.scss';
 
-const Success = () => {
-  const { medlemName } = useAppContext();
+const Kvittering = () => {
+  function getRandomOrder(min, max) {
+    min = Math.ceil(min * 100000);
+    max = Math.floor(max * 100000);
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
+
   return (
     <>
       <Head>
@@ -20,13 +25,13 @@ const Success = () => {
         <div className={`${styled.container} ${styled.successFlex}`}>
           <h1 className={styled.title}>Tak!</h1>
           <p className={styled.span} style={{ animationDelay: '200ms' }}>
-            {medlemName}
+            Ordre n. {getRandomOrder(1, 2)}
           </p>
-          <p style={{ animationDelay: '400ms' }}>Vi er enormt glade for at få dig som medlem.</p>
+          <p style={{ animationDelay: '400ms' }}>Din pakke vil blive sent idag.</p>
           <div className={styled.imageCircle} style={{ animationDelay: '600ms' }}>
             <Image src={productImage} alt='product gold' layout='fill' objectFit='cover' priority />
           </div>
-          <p style={{ animationDelay: '800ms' }}>Kig I din inbox vi har sendt en lille velkomst gave.</p>
+          <p style={{ animationDelay: '800ms' }}>Husk at give feedback om din oplevelse ❤️!</p>
 
           <Link href='/' passHref>
             <Button style={{ animationDelay: '1000ms' }}>Til Forsiden</Button>
@@ -37,4 +42,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default Kvittering;

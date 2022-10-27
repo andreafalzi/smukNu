@@ -1,0 +1,49 @@
+@import './scss/index.scss';
+
+.kassenProduct {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 1rem;
+  position: relative;
+
+  .kassenProductImage {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .kassenProductText {
+    width: 100%;
+
+    .kassenProductTitle {
+      font-size: 1.2rem;
+    }
+
+    .kassenProductQuantity {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      width: fit-content;
+      margin-top: 2rem;
+    }
+
+    .kassenProductPrice {
+      margin-top: 2rem;
+      font-weight: 700;
+      white-space: nowrap;
+      float: right;
+    }
+  }
+
+  .erase {
+    margin-block: auto;
+    font-size: 2rem;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}

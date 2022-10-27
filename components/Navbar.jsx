@@ -76,7 +76,7 @@ const Navbar = () => {
       </ul>
 
       {/* Cart Dropdown */}
-      <CartDropdown props={{ isOpenCart, cartItems, cartTotal }} />
+      <CartDropdown props={{ isOpenCart, setIsOpenCart, cartItems, cartTotal }} />
     </nav>
   );
 };

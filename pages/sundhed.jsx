@@ -16,7 +16,16 @@ const Sundhed = ({ questions }) => {
       </Head>
       <GenericHeader style={{ backgroundImage: `url(${sundhedHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={sundhedHeaderText.title} text={sundhedHeaderText.text} text2={sundhedHeaderText.text2} />
       <div className={styled.container}>
-        <AccordionList questions={questions} />
+        <div className={styled.sundhedContainer}>
+          <div className={styled.sundhedAccordion}>
+            <AccordionList questions={questions} />
+          </div>
+          <div className={styled.sundhedShapes}>
+            <div className={styled.shapeOne}>Vi</div>
+            <div className={styled.shapeTwo}>Hjælper</div>
+            <div className={styled.shapeThree}>Dig</div>
+          </div>
+        </div>
       </div>
       <TeaserBox />
     </>
