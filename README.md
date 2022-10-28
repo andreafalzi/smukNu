@@ -2,6 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+The project is hosted online smuknu.andreafalzi.dev.
+ 
+To run the project locally, remember to follow these instructions:
+
+- Clone the code from the repository
+- Once inside the folder, run npm install to get all dependencies
+- Finally, run npm run dev to start the project that opens on localhost:3000
+
 First, run the development server:
 
 ```bash
