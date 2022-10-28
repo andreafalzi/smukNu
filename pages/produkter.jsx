@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import GenericHeader from '../components/GenericHeader';
 import ProductsList from '../components/ProductsList';
 import TeaserBox from '../components/TeaserBox';
@@ -9,11 +8,6 @@ import styled from '../styles/Home.module.scss';
 const Produkter = ({ products }) => {
   return (
     <>
-      <Head>
-        <title>Smuk.Nu</title>
-        <meta name='description' content='Din sted to beauty' />
-        <link rel='icon' href='/smuknu_logo.png' />
-      </Head>
       <GenericHeader style={{ backgroundImage: `url(${produkterHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={produkterHeaderText.title} text={produkterHeaderText.text} boxStyle='transparentBox' />
       <section className={styled.section}>
         <div className={styled.container}>

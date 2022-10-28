@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import AccordionList from '../components/AccordionList';
 import GenericHeader from '../components/GenericHeader';
 import TeaserBox from '../components/TeaserBox';
@@ -9,11 +8,6 @@ import styled from '../styles/Sundhed.module.scss';
 const Sundhed = ({ questions }) => {
   return (
     <>
-      <Head>
-        <title>Smuk.Nu</title>
-        <meta name='description' content='Din sted to beauty' />
-        <link rel='icon' href='/smuknu_logo.png' />
-      </Head>
       <GenericHeader style={{ backgroundImage: `url(${sundhedHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={sundhedHeaderText.title} text={sundhedHeaderText.text} text2={sundhedHeaderText.text2} />
       <div className={styled.container}>
         <div className={styled.sundhedContainer}>

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import HomeHeader from '../components/HomeHeader';
 import ProductsList from '../components/ProductsList';
 import ReviewsList from '../components/ReviewsList';
@@ -9,11 +8,6 @@ import styled from '../styles/Home.module.scss';
 export default function Home({ products, reviews }) {
   return (
     <>
-      <Head>
-        <title>Smuk.Nu</title>
-        <meta name='description' content='Din sted to beauty' />
-        <link rel='icon' href='/smuknu_logo.png' />
-      </Head>
       <HomeHeader style={{ backgroundImage: `url(${header.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} />
       <section className={styled.section}>
         <div className={styled.container}>

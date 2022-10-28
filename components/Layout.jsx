@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from './Footer';
+import Meta from './Meta';
 import Navbar from './Navbar';
-import styled from '../styles/Layout.module.scss';
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Meta />
       <Navbar />
       <main>{children}</main>
       <Footer />

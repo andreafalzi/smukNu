@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Button from '../components/Button';
@@ -55,11 +54,6 @@ const Medlem = () => {
 
   return (
     <>
-      <Head>
-        <title>Smuk.Nu</title>
-        <meta name='description' content='Din sted to beauty' />
-        <link rel='icon' href='/smuknu_logo.png' />
-      </Head>
       <GenericHeader style={{ backgroundImage: `url(${medlemHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={medlemHeaderText.title} text={medlemHeaderText.text} text2={medlemHeaderText.text2} boxStyle='invertedBox' />
       <form onSubmit={handleSubmit} className={`${styled.form} ${styled.container}`}>
         <Input labelName='Fulde navn *' type='text' required name='name' value={name} onChange={handleChange} />

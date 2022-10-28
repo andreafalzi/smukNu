@@ -8,7 +8,7 @@ import CartDropdown from './CartDropdown';
 import styled from '../styles/Navbar.module.scss';
 
 const Navbar = () => {
-  const { cartItems, cartTotal } = useAppContext();
+  const { cartItems, cartTotal, cartCount } = useAppContext();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpenCart, setIsOpenCart] = useState(false);
 
@@ -35,12 +35,15 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <MdShoppingBag
-              className={`${styled.iconCart} ${cartItems.length > 0 ? styled.pink : ''}`}
+            <div
+              className={styled.shoppingIcon}
               onClick={() => {
                 setIsOpenCart((prev) => !prev);
               }}
-            />
+            >
+              <MdShoppingBag className={`${styled.iconCart} ${cartItems.length > 0 ? styled.pink : ''}`} />
+              <div className={styled.shoppingIconCounter}>{cartCount}</div>
+            </div>
             {!isOpenMenu ? (
               <MdMenu
                 className={styled.iconMenu}

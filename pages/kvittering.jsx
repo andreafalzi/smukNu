@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -15,12 +14,6 @@ const Kvittering = () => {
 
   return (
     <>
-      <Head>
-        <title>Smuk.Nu</title>
-        <meta name='description' content='Din sted to beauty' />
-        <link rel='icon' href='/smuknu_logo.png' />
-      </Head>
-
       <div className={styled.success}>
         <div className={`${styled.container} ${styled.successFlex}`}>
           <h1 className={styled.title}>Tak!</h1>
