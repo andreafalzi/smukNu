@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-The project is hosted online smuknu.andreafalzi.dev.
+The project is hosted online [smuknu.andreafalzi.dev](https://smuknu.andreafalzi.dev).
  
 To run the project locally, remember to follow these instructions:
 
