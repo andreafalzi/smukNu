@@ -12,7 +12,6 @@ To run the project locally, remember to follow these instructions:
 
 ## About
 
-This is my final exam project that I have to developfollowing a specific Design pattern, that it is provided by the school, together with specific guidelines such colors, font ecc...
-The projects is mobile first and I have added some features that were optional like the Shop and the dropdown cart.
+This is my final exam project which I had to develop following a specific Design template, provided by the school, along with precise guidelines such as colors, fonts etc ... The projects are mobile first and I have added some features that were optional such as the Store and the drop-down cart.
 
 
