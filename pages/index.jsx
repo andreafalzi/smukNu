@@ -3,10 +3,11 @@ import ProductsList from '../components/ProductsList';
 import ReviewsList from '../components/ReviewsList';
 import TeaserBox from '../components/TeaserBox';
 import header from '../public/assets/headers/front.jpg';
-import { products, reviews } from '../constants/index';
+// Only if API is broken
+// import { products, reviews } from '../constants/index';
 import styled from '../styles/Home.module.scss';
 
-export default function Home() {
+export default function Home({ products, reviews }) {
   return (
     <>
       <HomeHeader style={{ backgroundImage: `url(${header.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} />
@@ -32,20 +33,20 @@ export default function Home() {
 }
 
 //fetching
-// export const getServerSideProps = async () => {
-//   const resProducts = await fetch('https://smuknu.webmcdm.dk/products');
-//   const products = await resProducts.json();
+export const getServerSideProps = async () => {
+  const resProducts = await fetch('https://smuknu.webmcdm.dk/products');
+  const products = await resProducts.json();
 
-//   const resReviews = await fetch('https://smuknu.webmcdm.dk/reviews');
-//   const reviews = await resReviews.json();
+  const resReviews = await fetch('https://smuknu.webmcdm.dk/reviews');
+  const reviews = await resReviews.json();
 
-//   return {
-//     props: {
-//       products,
-//       reviews,
-//     },
-//   };
-// };
+  return {
+    props: {
+      products,
+      reviews,
+    },
+  };
+};
 
 // {
 //   products, reviews;
