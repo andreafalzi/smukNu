@@ -3,9 +3,9 @@ import Head from 'next/head';
 const Meta = ({ title, description, image, keywords }) => {
   return (
     <Head>
-      <meta charset='UTF-8' />
+      <meta charSet='UTF-8' />
       <title>Smuk.Nu</title>
-      <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       <meta name='viewport' content='width=device-width' />
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
