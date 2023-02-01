@@ -14,7 +14,7 @@ export const products = [
     title: 'All purpose balm',
     price: 169,
     recommended: true,
-    image: 'https://smuknu.webmcdm.dk/products/product_8281992819.jpg',
+    image: '/assets/products/product_8281992819.jpg',
     discountInPercent: '',
   },
   {
@@ -22,7 +22,7 @@ export const products = [
     title: 'Forlængende vandafvisende mascara',
     price: 176,
     recommended: true,
-    image: 'https://smuknu.webmcdm.dk/products/product_1213213211.jpg',
+    image: '/assets/products/product_1213213211.jpg',
     discountInPercent: '50',
   },
   {
@@ -30,7 +30,7 @@ export const products = [
     title: 'Multi-Action Concealer',
     price: 85,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_5435343533.jpg',
+    image: '/assets/products/product_5435343533.jpg',
     discountInPercent: '',
   },
   {
@@ -38,7 +38,7 @@ export const products = [
     title: 'Mayi Mousture Bamboo FibersShampoo',
     price: 212,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_4335542819.jpg',
+    image: '/assets/products/product_4335542819.jpg',
     discountInPercent: '25',
   },
   {
@@ -46,7 +46,7 @@ export const products = [
     title: 'Shower Gel',
     price: 102,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_2349838201.jpg',
+    image: '/assets/products/product_2349838201.jpg',
     discountInPercent: '',
   },
   {
@@ -54,7 +54,7 @@ export const products = [
     title: 'Bubble Bath, Body Wash, Conditioning detangler',
     price: 118,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_2233009200.jpg',
+    image: '/assets/products/product_2233009200.jpg',
     discountInPercent: '',
   },
   {
@@ -62,7 +62,7 @@ export const products = [
     title: 'Facial oil',
     price: 324,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_2332233444.jpg',
+    image: '/assets/products/product_2332233444.jpg',
     discountInPercent: '10',
   },
   {
@@ -70,7 +70,7 @@ export const products = [
     title: 'Eyeshadow',
     price: 110,
     recommended: false,
-    image: 'https://smuknu.webmcdm.dk/products/product_4566543883.jpg',
+    image: '/assets/products/product_4566543883.jpg',
     discountInPercent: '',
   },
 ];
@@ -80,25 +80,25 @@ export const reviews = [
     description: 'Jeg døjer rigtig meget med uren hud, og har prøvet alt muligt. Jeg fik Honest produkter anbefalet som en 30 dags kur, hvor jeg KUN skulle bruge den morgen og aften. Det har jeg så prøvet nu, og jeg kan se en tydelig forskel. Et ekstra plus er, at den er dejlig fugtgivende.',
     name: 'Phoebe Larsen',
     byline: 'Tilfreds Kunde',
-    image: 'https://smuknu.webmcdm.dk/reviews/phoebe_larsen.jpg',
+    image: '/assets/reviews/phoebe_larsen.jpg',
   },
   {
     description: 'Den hidtil bedste oplevelse med læbestifter! Jeg har fået så mange komplimenter, efter jeg er begyndt at gå med denne dagligt. Udover smuk farve, efterlader den læberne bløde og fugtige. Og det aller vigtigste - slet ikke klistret på den der ubehagelige måde, som nogen pomader kan. Den er et absolut "must have" i min håndtaske!!',
     name: 'Kathrine Udgaard',
     byline: 'Tilfreds Kunde',
-    image: 'https://smuknu.webmcdm.dk/reviews/kathrine_udgaard.jpg',
+    image: '/assets/reviews/kathrine_udgaard.jpg',
   },
   {
     description: "Fantastisk mascara! Jeg har prøvet mange forskellige, men jeg vender altid tilbage til 2000 calorie, da det simpelthen er den bedste mascara! Jeg har endda en dyr Lancome mascara liggende, men alligevel bruger jeg Honest 2000 calorie.. Den adskiller og giver længde og hvis man vil have ekstra 'wauw' effekt, skal man bare tilføje et ekstra lag.",
     name: 'Michelle Donnersen',
     byline: 'Super Frisk Sudheds-guru',
-    image: 'https://smuknu.webmcdm.dk/reviews/michelle_donnersen.jpg',
+    image: '/assets/reviews/michelle_donnersen.jpg',
   },
   {
     description: 'Igen, har jeg brugt denne fantastiske shampoo i en uges tid, og selfølgelig kommer der ikke resultat så hurtigt! Men jeg har altid brugt Redken Extreme, og msn kan virkelig mærke hvor meget det går ind og hjælper håret og styrker det. deres emballages er også fine og prisen er ganske fin, alle kan være med på dette. Mary Petersen Kunde',
     name: 'Mary Petersen',
     byline: 'Tilfreds Kunde',
-    image: 'https://smuknu.webmcdm.dk/reviews/mary_petersen.jpg',
+    image: '/assets/reviews/mary_petersen.jpg',
   },
 ];
 
