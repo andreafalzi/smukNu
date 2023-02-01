@@ -1,25 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import styled from '../styles/TeaserBox.module.scss';
 import Button from './Button';
 
-const TeaserBox = () => {
-  const [reviews, setReviews] = useState(null);
-  const [isLoading, setLoading] = useState(false);
+const TeaserBox = ({ reviewsProp }) => {
+  // const [reviews, setReviews] = useState(reviewsProp);
+  // const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch('https://smuknu.webmcdm.dk/reviews')
-      .then((res) => res.json())
-      .then((reviews) => {
-        setReviews(reviews);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   fetch('https://smuknu.webmcdm.dk/reviews')
+  //     .then((res) => res.json())
+  //     .then((reviews) => {
+  //       setReviews(reviews);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!reviews) return <p>No profile data</p>;
+  // if (isLoading) return <p>Loading...</p>;
+  // if (!reviews) return <p>No profile data</p>;
 
   return (
     <div className={styled.teaserBox}>
@@ -33,7 +33,7 @@ const TeaserBox = () => {
           </Link>
         </div>
         <div className={styled.boxImages}>
-          {reviews.slice(0, 4).map((review, index) => (
+          {reviewsProp.slice(0, 4).map((review, index) => (
             <div key={index} className={styled.boxImage}>
               <Image src={review.image} alt={review.name} layout='fill' objectFit='contain' />
             </div>

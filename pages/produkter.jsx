@@ -4,10 +4,10 @@ import TeaserBox from '../components/TeaserBox';
 import produkterHeader from '../public/assets/headers/products.jpg';
 import { produkterHeaderText } from '../constants/index';
 // Only if API is broken
-// import { products } from '../constants/index';
+import { products, reviews } from '../constants/index';
 import styled from '../styles/Home.module.scss';
 
-const Produkter = ({ products }) => {
+const Produkter = () => {
   return (
     <>
       <GenericHeader style={{ backgroundImage: `url(${produkterHeader.src})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} title={produkterHeaderText.title} text={produkterHeaderText.text} boxStyle='transparentBox' />
@@ -19,7 +19,7 @@ const Produkter = ({ products }) => {
           <ProductsList products={products} />
         </div>
       </section>
-      <TeaserBox />
+      <TeaserBox reviewsProp={reviews} />
     </>
   );
 };
@@ -27,13 +27,13 @@ const Produkter = ({ products }) => {
 export default Produkter;
 
 // fetching;
-export const getServerSideProps = async () => {
-  const resProducts = await fetch('https://smuknu.webmcdm.dk/products');
-  const products = await resProducts.json();
+// export const getServerSideProps = async () => {
+//   const resProducts = await fetch('https://smuknu.webmcdm.dk/products');
+//   const products = await resProducts.json();
 
-  return {
-    props: {
-      products,
-    },
-  };
-};
+//   return {
+//     props: {
+//       products,
+//     },
+//   };
+// };
